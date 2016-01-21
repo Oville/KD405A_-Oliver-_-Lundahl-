@@ -1,0 +1,66 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.JToolBar;
+import javax.swing.JButton;
+import java.awt.Color;
+import javax.swing.JScrollPane;
+
+public class frame extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtTest;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					frame frame = new frame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public frame() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 630, 400);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		txtTest = new JTextField();
+		txtTest.setBackground(Color.WHITE);
+		txtTest.setBounds(329, 85, 259, 164);
+		contentPane.add(txtTest);
+		txtTest.setColumns(10);
+		
+		JButton btnSpara = new JButton("Spara");
+		btnSpara.setBackground(Color.LIGHT_GRAY);
+		btnSpara.setBounds(499, 248, 89, 23);
+		contentPane.add(btnSpara);
+		
+		table = new JTable();
+		table.setBounds(10, 60, 170, 249);
+		contentPane.add(table);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(185, 304, -174, -242);
+		contentPane.add(scrollPane);
+	}
+}

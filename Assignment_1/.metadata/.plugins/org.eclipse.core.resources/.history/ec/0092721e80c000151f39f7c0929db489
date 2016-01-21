@@ -1,0 +1,110 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.JToolBar;
+import javax.swing.JButton;
+import java.awt.Color;
+import javax.swing.JScrollPane;
+import javax.swing.JLabel;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EtchedBorder;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class frame extends JFrame {
+
+	private JPanel contentPane;
+	private JTable table;
+	private JTextField txtGitfit;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					frame frame = new frame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public frame() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 630, 400);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnSpara = new JButton("Spara");
+		btnSpara.setBackground(Color.LIGHT_GRAY);
+		btnSpara.setBounds(501, 249, 89, 23);
+		contentPane.add(btnSpara);
+		
+		table = new JTable();
+		table.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		table.setBackground(Color.YELLOW);
+		table.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{"namn"},
+				{"namn man"},
+				{""},
+				{""},
+				{""},
+				{""},
+				{""},
+				{""},
+				{""},
+				{""},
+				{""},
+				{null},
+				{""},
+				{null},
+			},
+			new String[] {
+				"Medlemmar"
+			}
+		));
+		table.getColumnModel().getColumn(0).setPreferredWidth(621);
+		table.getColumnModel().getColumn(0).setMinWidth(50);
+		table.setForeground(Color.BLACK);
+		table.setBounds(10, 60, 123, 224);
+		contentPane.add(table);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(143, 289, -132, -227);
+		contentPane.add(scrollPane);
+		
+		JLabel lblNewLabel = new JLabel("Namn: Anders Jansson");
+		lblNewLabel.setForeground(Color.BLACK);
+		lblNewLabel.setBackground(Color.YELLOW);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNewLabel.setBounds(270, 60, 318, 189);
+		contentPane.add(lblNewLabel);
+		
+		txtGitfit = new JTextField();
+		txtGitfit.setBackground(Color.MAGENTA);
+		txtGitfit.setHorizontalAlignment(SwingConstants.CENTER);
+		txtGitfit.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		txtGitfit.setText("GITFIT");
+		txtGitfit.setBounds(236, 11, 108, 38);
+		contentPane.add(txtGitfit);
+		txtGitfit.setColumns(10);
+	}
+}
