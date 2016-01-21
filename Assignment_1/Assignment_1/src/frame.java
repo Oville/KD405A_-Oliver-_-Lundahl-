@@ -19,6 +19,8 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JDesktopPane;
 import javax.swing.JMenuBar;
+import javax.swing.Box;
+import javax.swing.JMenu;
 
 public class frame extends JFrame {
 
@@ -29,6 +31,12 @@ public class frame extends JFrame {
 	private JTextField txtPersonr;
 	private JTextField txtTelefonr;
 	private JTextField txtEmailJansonjansongmailcom;
+	private JMenu mnMedlem;
+	private JLabel lblNyMedlem;
+	private JLabel lblHittaMedlem;
+	private JMenu mnHjlp;
+	private JLabel lblHjlp;
+	private JLabel lblOmProgrammet;
 
 	/**
 	 * Launch the application.
@@ -58,11 +66,6 @@ public class frame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnSpara = new JButton("Spara");
-		btnSpara.setBackground(Color.LIGHT_GRAY);
-		btnSpara.setBounds(452, 235, 89, 23);
-		contentPane.add(btnSpara);
-		
 		table = new JTable();
 		table.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		table.setBackground(Color.YELLOW);
@@ -78,7 +81,6 @@ public class frame extends JFrame {
 				{"Mats Brob\u00E4ck"},
 				{"Matilda Hammar"},
 				{"Johennes Brolin"},
-				{null},
 			},
 			new String[] {
 				"Medlemmar"
@@ -87,7 +89,7 @@ public class frame extends JFrame {
 		table.getColumnModel().getColumn(0).setPreferredWidth(621);
 		table.getColumnModel().getColumn(0).setMinWidth(50);
 		table.setForeground(Color.BLACK);
-		table.setBounds(10, 60, 123, 161);
+		table.setBounds(10, 60, 123, 146);
 		contentPane.add(table);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -139,7 +141,46 @@ public class frame extends JFrame {
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBackground(Color.BLUE);
-		lblNewLabel.setBounds(243, 11, 79, 29);
+		lblNewLabel.setBounds(400, 11, 79, 29);
 		contentPane.add(lblNewLabel);
+		
+		Box horizontalBox = Box.createHorizontalBox();
+		horizontalBox.setBounds(257, 50, 347, 210);
+		contentPane.add(horizontalBox);
+		
+		JButton btnSpara = new JButton("Spara");
+		btnSpara.setBounds(403, 259, 61, 23);
+		contentPane.add(btnSpara);
+		btnSpara.setBackground(Color.LIGHT_GRAY);
+		
+		JMenu mnNewMenu = new JMenu("Arkiv");
+		mnNewMenu.setBounds(10, 11, 107, 22);
+		contentPane.add(mnNewMenu);
+		
+		JLabel lblAvsluta = new JLabel("Avsluta");
+		mnNewMenu.add(lblAvsluta);
+		
+		JLabel lblSkrivUt = new JLabel("Skriv ut");
+		mnNewMenu.add(lblSkrivUt);
+		
+		mnMedlem = new JMenu("Medlem");
+		mnMedlem.setBounds(127, 11, 107, 22);
+		contentPane.add(mnMedlem);
+		
+		lblNyMedlem = new JLabel("Ny medlem");
+		mnMedlem.add(lblNyMedlem);
+		
+		lblHittaMedlem = new JLabel("Hitta medlem");
+		mnMedlem.add(lblHittaMedlem);
+		
+		mnHjlp = new JMenu("Hj\u00E4lp");
+		mnHjlp.setBounds(243, 11, 107, 22);
+		contentPane.add(mnHjlp);
+		
+		lblHjlp = new JLabel("Hj\u00E4lp");
+		mnHjlp.add(lblHjlp);
+		
+		lblOmProgrammet = new JLabel("Om programmet");
+		mnHjlp.add(lblOmProgrammet);
 	}
 }
