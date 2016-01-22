@@ -15,9 +15,6 @@ import javax.swing.SwingConstants;
 import javax.swing.Box;
 import javax.swing.JMenu;
 import javax.swing.ImageIcon;
-import javax.swing.JMenuBar;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class frame extends JFrame {
 
@@ -88,7 +85,7 @@ public class frame extends JFrame {
 		txtNamnAndersJansson.setBackground(Color.YELLOW);
 		txtNamnAndersJansson.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		txtNamnAndersJansson.setText("NAMN: Anders Jansson");
-		txtNamnAndersJansson.setBounds(233, 50, 195, 38);
+		txtNamnAndersJansson.setBounds(257, 50, 195, 38);
 		contentPane.add(txtNamnAndersJansson);
 		txtNamnAndersJansson.setColumns(10);
 
@@ -96,7 +93,7 @@ public class frame extends JFrame {
 		txtAdressNordenskildsgatan.setBackground(Color.YELLOW);
 		txtAdressNordenskildsgatan.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		txtAdressNordenskildsgatan.setText("ADRESS: Nordenski\u00F6ldsgatan 1\r\n");
-		txtAdressNordenskildsgatan.setBounds(233, 87, 195, 38);
+		txtAdressNordenskildsgatan.setBounds(257, 88, 195, 38);
 		contentPane.add(txtAdressNordenskildsgatan);
 		txtAdressNordenskildsgatan.setColumns(10);
 
@@ -104,7 +101,7 @@ public class frame extends JFrame {
 		txtPersonr.setBackground(Color.YELLOW);
 		txtPersonr.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		txtPersonr.setText("\r\nPERSONR: 2007256723");
-		txtPersonr.setBounds(233, 124, 195, 38);
+		txtPersonr.setBounds(257, 123, 195, 38);
 		contentPane.add(txtPersonr);
 		txtPersonr.setColumns(10);
 
@@ -112,7 +109,7 @@ public class frame extends JFrame {
 		txtTelefonr.setBackground(Color.YELLOW);
 		txtTelefonr.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		txtTelefonr.setText("TELEFONR: 687125942\r\n");
-		txtTelefonr.setBounds(233, 160, 195, 38);
+		txtTelefonr.setBounds(257, 161, 195, 38);
 		contentPane.add(txtTelefonr);
 		txtTelefonr.setColumns(10);
 
@@ -120,7 +117,7 @@ public class frame extends JFrame {
 		txtEmailJansonjansongmailcom.setBackground(Color.YELLOW);
 		txtEmailJansonjansongmailcom.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		txtEmailJansonjansongmailcom.setText("E-MAIL Jansonjanson@gmail.com ");
-		txtEmailJansonjansongmailcom.setBounds(233, 198, 195, 38);
+		txtEmailJansonjansongmailcom.setBounds(257, 199, 195, 38);
 		contentPane.add(txtEmailJansonjansongmailcom);
 		txtEmailJansonjansongmailcom.setColumns(10);
 
@@ -129,52 +126,51 @@ public class frame extends JFrame {
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBackground(Color.BLACK);
-		lblNewLabel.setBounds(295, 11, 79, 29);
+		lblNewLabel.setBounds(400, 11, 79, 29);
 		contentPane.add(lblNewLabel);
 
+		Box horizontalBox = Box.createHorizontalBox();
+		horizontalBox.setBounds(257, 50, 206, 210);
+		contentPane.add(horizontalBox);
+
 		JButton btnSpara = new JButton("Spara");
-		btnSpara.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnSpara.setBounds(301, 247, 73, 23);
+		btnSpara.setBounds(391, 258, 61, 23);
 		contentPane.add(btnSpara);
 		btnSpara.setBackground(Color.LIGHT_GRAY);
+
+		JMenu mnNewMenu = new JMenu("Arkiv");
+		mnNewMenu.setBounds(10, 11, 107, 22);
+		contentPane.add(mnNewMenu);
+
+		JLabel lblAvsluta = new JLabel("Avsluta");
+		mnNewMenu.add(lblAvsluta);
+
+		JLabel lblSkrivUt = new JLabel("Skriv ut");
+		mnNewMenu.add(lblSkrivUt);
+
+		mnMedlem = new JMenu("Medlem");
+		mnMedlem.setBounds(127, 11, 107, 22);
+		contentPane.add(mnMedlem);
+
+		lblNyMedlem = new JLabel("Ny medlem");
+		mnMedlem.add(lblNyMedlem);
+
+		lblHittaMedlem = new JLabel("Hitta medlem");
+		mnMedlem.add(lblHittaMedlem);
+
+		mnHjlp = new JMenu("Hj\u00E4lp");
+		mnHjlp.setBounds(243, 11, 107, 22);
+		contentPane.add(mnHjlp);
+
+		lblHjlp = new JLabel("Hj\u00E4lp");
+		mnHjlp.add(lblHjlp);
+
+		lblOmProgrammet = new JLabel("Om programmet");
+		mnHjlp.add(lblOmProgrammet);
 		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon(frame.class.getResource("/img/GITFIT.jpg")));
-		label.setBounds(438, 60, 166, 158);
+		label.setBounds(451, 50, 153, 158);
 		contentPane.add(label);
-		
-		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(32, 11, 123, 21);
-		contentPane.add(menuBar);
-		
-				JMenu mnNewMenu = new JMenu("Arkiv");
-				menuBar.add(mnNewMenu);
-				
-						JLabel lblAvsluta = new JLabel("Avsluta");
-						mnNewMenu.add(lblAvsluta);
-						
-								JLabel lblSkrivUt = new JLabel("Skriv ut");
-								mnNewMenu.add(lblSkrivUt);
-										
-												mnHjlp = new JMenu("Hj\u00E4lp");
-												menuBar.add(mnHjlp);
-												
-														lblHjlp = new JLabel("Hj\u00E4lp");
-														mnHjlp.add(lblHjlp);
-														
-																lblOmProgrammet = new JLabel("Om programmet");
-																mnHjlp.add(lblOmProgrammet);
-								
-										mnMedlem = new JMenu("Medlem");
-										menuBar.add(mnMedlem);
-										
-												lblNyMedlem = new JLabel("Ny medlem");
-												mnMedlem.add(lblNyMedlem);
-												
-														lblHittaMedlem = new JLabel("Hitta medlem");
-														mnMedlem.add(lblHittaMedlem);
 	}
 }

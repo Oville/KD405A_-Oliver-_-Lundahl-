@@ -16,8 +16,6 @@ import javax.swing.Box;
 import javax.swing.JMenu;
 import javax.swing.ImageIcon;
 import javax.swing.JMenuBar;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class frame extends JFrame {
 
@@ -129,14 +127,10 @@ public class frame extends JFrame {
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBackground(Color.BLACK);
-		lblNewLabel.setBounds(295, 11, 79, 29);
+		lblNewLabel.setBounds(400, 11, 79, 29);
 		contentPane.add(lblNewLabel);
 
 		JButton btnSpara = new JButton("Spara");
-		btnSpara.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
 		btnSpara.setBounds(301, 247, 73, 23);
 		contentPane.add(btnSpara);
 		btnSpara.setBackground(Color.LIGHT_GRAY);
@@ -147,7 +141,7 @@ public class frame extends JFrame {
 		contentPane.add(label);
 		
 		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(32, 11, 123, 21);
+		menuBar.setBounds(140, 22, 123, 21);
 		contentPane.add(menuBar);
 		
 				JMenu mnNewMenu = new JMenu("Arkiv");

@@ -15,9 +15,6 @@ import javax.swing.SwingConstants;
 import javax.swing.Box;
 import javax.swing.JMenu;
 import javax.swing.ImageIcon;
-import javax.swing.JMenuBar;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class frame extends JFrame {
 
@@ -129,52 +126,47 @@ public class frame extends JFrame {
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBackground(Color.BLACK);
-		lblNewLabel.setBounds(295, 11, 79, 29);
+		lblNewLabel.setBounds(400, 11, 79, 29);
 		contentPane.add(lblNewLabel);
 
 		JButton btnSpara = new JButton("Spara");
-		btnSpara.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnSpara.setBounds(301, 247, 73, 23);
+		btnSpara.setBounds(391, 258, 61, 23);
 		contentPane.add(btnSpara);
 		btnSpara.setBackground(Color.LIGHT_GRAY);
+
+		JMenu mnNewMenu = new JMenu("Arkiv");
+		mnNewMenu.setBounds(10, 11, 107, 22);
+		contentPane.add(mnNewMenu);
+
+		JLabel lblAvsluta = new JLabel("Avsluta");
+		mnNewMenu.add(lblAvsluta);
+
+		JLabel lblSkrivUt = new JLabel("Skriv ut");
+		mnNewMenu.add(lblSkrivUt);
+
+		mnMedlem = new JMenu("Medlem");
+		mnMedlem.setBounds(127, 11, 107, 22);
+		contentPane.add(mnMedlem);
+
+		lblNyMedlem = new JLabel("Ny medlem");
+		mnMedlem.add(lblNyMedlem);
+
+		lblHittaMedlem = new JLabel("Hitta medlem");
+		mnMedlem.add(lblHittaMedlem);
+
+		mnHjlp = new JMenu("Hj\u00E4lp");
+		mnHjlp.setBounds(243, 11, 107, 22);
+		contentPane.add(mnHjlp);
+
+		lblHjlp = new JLabel("Hj\u00E4lp");
+		mnHjlp.add(lblHjlp);
+
+		lblOmProgrammet = new JLabel("Om programmet");
+		mnHjlp.add(lblOmProgrammet);
 		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon(frame.class.getResource("/img/GITFIT.jpg")));
 		label.setBounds(438, 60, 166, 158);
 		contentPane.add(label);
-		
-		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(32, 11, 123, 21);
-		contentPane.add(menuBar);
-		
-				JMenu mnNewMenu = new JMenu("Arkiv");
-				menuBar.add(mnNewMenu);
-				
-						JLabel lblAvsluta = new JLabel("Avsluta");
-						mnNewMenu.add(lblAvsluta);
-						
-								JLabel lblSkrivUt = new JLabel("Skriv ut");
-								mnNewMenu.add(lblSkrivUt);
-										
-												mnHjlp = new JMenu("Hj\u00E4lp");
-												menuBar.add(mnHjlp);
-												
-														lblHjlp = new JLabel("Hj\u00E4lp");
-														mnHjlp.add(lblHjlp);
-														
-																lblOmProgrammet = new JLabel("Om programmet");
-																mnHjlp.add(lblOmProgrammet);
-								
-										mnMedlem = new JMenu("Medlem");
-										menuBar.add(mnMedlem);
-										
-												lblNyMedlem = new JLabel("Ny medlem");
-												mnMedlem.add(lblNyMedlem);
-												
-														lblHittaMedlem = new JLabel("Hitta medlem");
-														mnMedlem.add(lblHittaMedlem);
 	}
 }
