@@ -1,0 +1,20 @@
+public House(int yearBuilt,int size) är konstruktorn
+public class House{
+ private int yearBuilt; instans variabel
+ private int size; instans variabel
+ private final int minSize = 10; instans variabel
+public int getYearBuilt(){
+}
+public int getSize(){
+}
+ Är båda instans metoder
+minSize innebär att resultatet av metoderna kan inte vara mindre en värdet minSize anger.
+Att deklarera kod public och private innebär att om metoden eller variabeln är private kan den bara nås av det som finns inuti klassen. medans public gör att den kan nås överallt.
+KLASSNAMN-House
+VARIABLER
+-yearBuilt:int
+-size:int
+-MINSize:int
+METODER
++getYearBuilt().int
++getSize().int
