@@ -41,3 +41,4 @@ Caused by: java.net.UnknownHostException: download.eclipse.org
 2016-01-28 23:44:30,774 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not available. Remote download required.
 2016-01-29 12:21:55,027 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
 2016-01-29 13:22:24,768 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-02-04 21:13:37,721 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.

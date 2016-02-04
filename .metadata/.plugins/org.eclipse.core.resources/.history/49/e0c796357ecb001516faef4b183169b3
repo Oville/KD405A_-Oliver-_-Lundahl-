@@ -1,0 +1,8 @@
+package se.mah.oliveridk15;
+
+public class Bike {
+private int String color = Constants.Standard;
+private int String price = 0;
+private int size = 1;
+
+}
