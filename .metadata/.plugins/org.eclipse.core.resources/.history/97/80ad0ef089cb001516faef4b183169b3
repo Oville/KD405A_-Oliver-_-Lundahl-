@@ -1,0 +1,5 @@
+package se.mah.oliver.idk15;
+
+Bike[] myBikes = new Bike [10]
+myBikes[0]= Bike();
+

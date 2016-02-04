@@ -1,0 +1,10 @@
+package se.mah.oliver.idk15;
+
+public class Main {
+ArrayList<Bike> MyBikes;
+MyBikes= new ArrayList<Bike>();
+for(Bike bike: bikes){
+	Bike.act();
+}
+}
+
