@@ -1,0 +1,10 @@
+package se.mah.oliver.idk15;
+
+public class Constant {
+public static int MAX_PRICE = 30000;
+public static int MIN_PRICE=0;
+public static int MAX_SIZE = 28;
+public static int MIN_SIZE= 8;
+public static final String[]
+	
+}

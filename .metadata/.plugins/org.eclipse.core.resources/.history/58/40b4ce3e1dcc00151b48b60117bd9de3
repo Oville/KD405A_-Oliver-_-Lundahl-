@@ -1,0 +1,44 @@
+package se.mah.oliver.idk15;
+
+import java.util.ArrayList;
+
+public class BikeStore {
+
+	private int size = 8;
+	private int price = 0;
+	private String color = "black";
+
+	public void addBike(String color, int size, int price) {
+		if (size >= Constant.MIN_SIZE && size <= Constant.MAX_SIZE) {
+			this.size = size;
+		} else {
+			this.size = 28;
+		}
+		if (price >= Constant.MIN_PRICE && price <= Constant.MAX_PRICE) {
+			this.price = price;
+		} else {
+			this.price = 1000;
+		}
+		this.color = Constant.CheckValue(color);
+	}
+
+	public static void main(String[] args) {
+		ArrayList<Bike> myBikes = new ArrayList<Bike>();
+		myBikes = new ArrayList<Bike>(9);
+		myBikes.add(new Bike("black", 24, 5050));
+		myBikes.add(new Bike("blue", 18, 500));
+		myBikes.add(new Bike("red", 20, 7450));
+		myBikes.add(new Bike("green", 15, 30000));
+		myBikes.add(new Bike("black", 12, 9568));
+		myBikes.add(new Bike("white", 24, 9359));
+		myBikes.add(new Bike("red", 16, 25637));
+		myBikes.add(new Bike("black", 12, 1010));
+		myBikes.add(new Bike("green", 24, 7384));
+		myBikes.add(new Bike("blue", 20, 6789));
+		for (int i = 0; i < myBikes.size(); i++) {
+			Bike a = myBikes.get(i);
+			System.out.println("en " + a.getColor() + " " + "cyckel " + "som är" + " " + a.getsize() + " "
+					+ "och kostar" + " " + a.getprice());
+		}
+	}
+}

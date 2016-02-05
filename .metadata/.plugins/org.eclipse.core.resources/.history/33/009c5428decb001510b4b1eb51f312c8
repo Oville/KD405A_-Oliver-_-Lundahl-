@@ -1,0 +1,21 @@
+package se.mah.oliver.idk15;
+
+public class Main {
+ArrayList<Bike> myBikes;
+myBikes= new ArrayList<Bike>(9);
+Bike.add(0);
+Bike.add(1);
+Bike.add(2);
+Bike.add(3);
+Bike.add(4);
+Bike.add(5);
+Bike.add(6);
+Bike.add(7);
+Bike.add(8);
+Bike.add(9);
+for(Bike bike: bikes){
+	Bike.act();
+}
+}
+}
+
