@@ -1,3 +1,4 @@
+/*the text area that the prints the info about the animals with an array*/
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.util.ArrayList;

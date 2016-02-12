@@ -1,4 +1,7 @@
-
+/*takes the input form the buttons and prints it in the text field
+ * the add_dog button takes the dogs, the add_human takes the humans
+ * pressing the add info button prints the data to the text field, if an error occurs it prints an error message 
+ * in the error the field */
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

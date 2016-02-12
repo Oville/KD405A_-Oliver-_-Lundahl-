@@ -1,4 +1,4 @@
-
+/* creates the human class and gives it its variables needed to create a human*/
 public class Human {
 private Dog dog;
 private String name="";

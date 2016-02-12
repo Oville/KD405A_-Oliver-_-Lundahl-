@@ -1,4 +1,4 @@
-
+/*create the cat class and gives it the needed variables and the parameters needed to crate a cat*/
 public class Cat extends Mamal {
 	private int numberOfLives;
 

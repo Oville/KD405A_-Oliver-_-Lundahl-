@@ -1,4 +1,4 @@
-
+/**create the animal class and sets the ints and strings it needs to create a animal*/
 public abstract class Animal {
 	private String latinName;
 	private String friendlyName;

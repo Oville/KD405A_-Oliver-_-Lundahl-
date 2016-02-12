@@ -1,4 +1,4 @@
-
+/** create the abstrakt class mamal and sets the needed ints and strings needed to create a mamal */
 public abstract class Mamal extends Animal {
 	private int gestationTime;
 

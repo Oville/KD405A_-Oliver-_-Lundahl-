@@ -1,4 +1,4 @@
-
+/* create the dog class and gives it the needed variables and the parameters needed to crate a dog*/
 public class Dog extends Mamal {
 	private boolean Stupid;
 

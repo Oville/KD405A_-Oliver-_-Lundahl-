@@ -1,4 +1,4 @@
-
+/*create the snake class and gives it the needed variables and the parameters needed to crate a snake*/
 public class Snake extends Animal {
 	private boolean poisonus;
 
