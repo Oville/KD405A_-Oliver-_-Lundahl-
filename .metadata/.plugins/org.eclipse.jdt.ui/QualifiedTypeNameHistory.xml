@@ -5,4 +5,5 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="java.awt.Toolkit"/>
+<fullyQualifiedTypeName name="se.mah.k3lara.skaneAPI.xmlparser.Parser"/>
 </qualifiedTypeNameHistroy>

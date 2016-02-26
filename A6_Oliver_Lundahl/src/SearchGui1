@@ -1,0 +1,9 @@
+2:1 Sökningen sker mellan Malmö C och Lund C.
+2 http://www.labs.skanetrafiken.se/v2.2/resultspage.asp?cmdaction=next&selPointFr=0|80000|0&selPointTo=0|81216|0&NoOf=5
+3 Journeys taggen beskriver resan i sin helhet med alla detajler. Journey beskriver detaljerna om resan med 
+tillexemple pricer och avstånd.
+Routelinks beskriver info om busslinjernas namn och koder. 
+Routelink beskriver detaljerna om kollektivlinjen med avgångs och ankosmt tider, pris, 
+avstånd och linjens nummer.
+4 NoOfChanges beskriver antalet byten och ligger under Journey.
+5 I det API Lars har gjort har inte en <CO2factor> tag för att beskriva koldioxid.
